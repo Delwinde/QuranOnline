@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <label for="reciter">Choose a reciter:</label>
-        <select name="reciter" id="reciter">
+        <select name="reciter" id="reciter" onchange="getReciterValue();">
         <option value="AbdulSamad_64kbps_QuranExplorer.Com">Abdul Basit Abdul Samad (AbdulSamad_64kbps_QuranExplorer.Com)</option>
         <option value="Abdul_Basit_Mujawwad_128kbps">Abdul Basit Mujawwad (Abdul_Basit_Mujawwad_128kbps)</option>
         <option value="Abdul_Basit_Murattal_192kbps">Abdul Basit Murattal (Abdul_Basit_Murattal_192kbps)</option>
@@ -93,7 +93,7 @@
         <div>
         <div class="container">
         <label for="chapter">Choose a chapter:</label>
-        <select name="chapter" id="chapter">
+        <select name="chapter" id="chapter" onchange="getChapterValue();">
             <option value="1">1: Al-Faatiha</option>
             <option value="2">2: Al-Baqara</option>
             <option value="3">3: Aal-i-Imraan</option>
@@ -211,10 +211,15 @@
         </select>
     </div>
     <div class="container">
-     <img src="" alt="image">
+        <label for="aya">Choose aya number:</label>
+        <select name="aya" id="aya">
+        </select>
     </div>
     <div class="container">
-        <audio src="">audio</audio>
+     <img src="http://www.everyayah.com/data/images_png/11_1.png" alt="image">
+    </div>
+    <div class="container">
+        <audio src="http://www.everyayah.com/data/Abdul_Basit_Mujawwad_128kbps/011001.mp3" controls preload></audio>
     </div>
     <script src="js/app.js"></script>
 </body>
