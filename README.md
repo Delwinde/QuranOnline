@@ -3,4 +3,4 @@ quran-online.netlify.app/
 
 # Contribute  
 
-See [issues](https://github.com/SaidRH/QuranPlayer/issues).
+See [issues](https://github.com/SaidRH/QuranOnline/issues).
