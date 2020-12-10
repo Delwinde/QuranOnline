@@ -252,7 +252,8 @@ function handle(removeInnerHtml = false)
     }
     }
     imgLink.src = "http://www.everyayah.com/data/images_png/"+ chapterSelect.toString()+"_"+ ayaSelect.value.toString()+".png";
-    imgDownload.innerText = imgLink.src;
+    imgDownload.href = imgLink.src;
+    imgDownload.innerText = "Image";
     getReciter();
 }
 
@@ -298,6 +299,7 @@ function getReciter()
     {
   audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/"  + chapterSelect.toString()  + ayaSelect.value.toString() + ".mp3";
     }
-    audioDownload.innerText = audioLink.src;
+    audioDownload.href = audioLink.src;
+    audioDownload.innerText = "Audio";
 }
 
