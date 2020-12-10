@@ -32,3 +32,8 @@ td{
   padding: 10px;
   border: black solid 2px;
 }
+img{
+  border: black solid 2px;
+  border-radius: 10px;
+
+}
