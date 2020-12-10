@@ -1,14 +1,19 @@
+let ayaCounter;
+let ayaSelect = document.getElementById('aya');
+let chapterSelect = document.getElementById("chapter").value;
+let imgLink = document.getElementById("imgLink");
+let reciterSelect = document.getElementById("reciter").value;
+let audioLink = document.getElementById("audioLink");
+
 function handle(removeInnerHtml = false)
 {
-    let ayaCounter;
-    let ayaSelect = document.getElementById('aya');
-    let chapterSelect = document.getElementById("chapter").value;
-    let imgLink = document.getElementById("imgLink");
-
+    ayaCounter;
+    ayaSelect = document.getElementById('aya');
+    chapterSelect = document.getElementById("chapter").value;
+    imgLink = document.getElementById("imgLink");
     if (removeInnerHtml === true){
     ayaSelect.innerHTML = '';
     }
-
     if (chapterSelect == 1){
       ayaCounter = 7;
     }else if(chapterSelect == 2){
@@ -245,13 +250,51 @@ function handle(removeInnerHtml = false)
     }
     }
     imgLink.src = "http://www.everyayah.com/data/images_png/"+ chapterSelect.toString()+"_"+ ayaSelect.value.toString()+".png";
+    getReciter();
 }
 
 function getReciter()
 {
-    let reciterSelect = document.getElementById("reciter").value;
-    let audioLink = document.getElementById("audioLink");
-    //audioLink.src = "http://www.everyayah.com/data/images_png/"+ chapterSelect.toString()+"_"+ ayaSelect.value.toString();
-    //http://www.everyayah.com/data/AbdulSamad_64kbps_QuranExplorer.Com/001001.mp3
+    reciterSelect = document.getElementById("reciter").value;
+    audioLink = document.getElementById("audioLink");
+    if (chapterSelect > 0 && chapterSelect < 10 && ayaSelect.value > 0 && ayaSelect.value < 10)
+    {
+        audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "00" + chapterSelect.toString() + "00" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 0 && chapterSelect < 10 && ayaSelect.value > 9 && ayaSelect.value < 100)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "00" + chapterSelect.toString() + "0" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 0 && chapterSelect < 10 && ayaSelect.value > 99)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "00" + chapterSelect.toString()  + ayaSelect.value.toString() + ".mp3";
+    }
+
+    else if (chapterSelect > 9 && chapterSelect < 100 && ayaSelect.value > 0 && ayaSelect.value < 10)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "0" + chapterSelect.toString() + "00" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 9 && chapterSelect < 100 && ayaSelect.value > 9 && ayaSelect.value < 100)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "0" + chapterSelect.toString() + "0" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 9 && chapterSelect < 100 && ayaSelect.value > 99)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "00" + chapterSelect.toString() + ayaSelect.value.toString() + ".mp3";
+    }
+
+    else if (chapterSelect > 99 && ayaSelect.value > 0 && ayaSelect.value < 10)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + chapterSelect.toString() + "00" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 99 && ayaSelect.value > 9 && ayaSelect.value < 100)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + chapterSelect.toString() + "00" + ayaSelect.value.toString() + ".mp3";
+    }
+    else if (chapterSelect > 99 && ayaSelect.value > 99)
+    {
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/"  + chapterSelect.toString()  + ayaSelect.value.toString() + ".mp3";
+    }
+    console.log(audioLink.src);
 }
 
