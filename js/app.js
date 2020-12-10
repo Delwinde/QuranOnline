@@ -4,6 +4,8 @@ let chapterSelect = document.getElementById("chapter").value;
 let imgLink = document.getElementById("imgLink");
 let reciterSelect = document.getElementById("reciter").value;
 let audioLink = document.getElementById("audioLink");
+let imgDownload = document.getElementById("imgDownload");
+let audioDownload = document.getElementById("audioDownload");
 
 function handle(removeInnerHtml = false)
 {
@@ -250,6 +252,7 @@ function handle(removeInnerHtml = false)
     }
     }
     imgLink.src = "http://www.everyayah.com/data/images_png/"+ chapterSelect.toString()+"_"+ ayaSelect.value.toString()+".png";
+    imgDownload.innerText = imgLink.src;
     getReciter();
 }
 
@@ -295,6 +298,6 @@ function getReciter()
     {
   audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/"  + chapterSelect.toString()  + ayaSelect.value.toString() + ".mp3";
     }
-    console.log(audioLink.src);
+    audioDownload.innerText = audioLink.src;
 }
 
