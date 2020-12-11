@@ -280,7 +280,7 @@ function getReciter()
     }
     else if (chapterSelect > 9 && chapterSelect < 100 && ayaSelect.value > 99)
     {
-  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "00" + chapterSelect.toString() + ayaSelect.value.toString() + ".mp3";
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + "0" + chapterSelect.toString() + ayaSelect.value.toString() + ".mp3";
     }
 
     else if (chapterSelect > 99 && ayaSelect.value > 0 && ayaSelect.value < 10)
@@ -289,7 +289,7 @@ function getReciter()
     }
     else if (chapterSelect > 99 && ayaSelect.value > 9 && ayaSelect.value < 100)
     {
-  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + chapterSelect.toString() + "00" + ayaSelect.value.toString() + ".mp3";
+  audioLink.src ="http://www.everyayah.com/data/"+reciterSelect.toString()+"/" + chapterSelect.toString() + "0" + ayaSelect.value.toString() + ".mp3";
     }
     else if (chapterSelect > 99 && ayaSelect.value > 99)
     {
