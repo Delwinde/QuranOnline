@@ -11,10 +11,9 @@ label{
 }
 
 .container{
-  margin: 15px;
+  margin: 30px;
   text-align: center;
 }
-
 select{
   width: 580px;
   height: 50px;
@@ -32,20 +31,26 @@ td{
   padding: 10px;
   border: black solid 2px;
 }
+
+th{
+  padding: 15px;
+}
+
 img{
+  margin: 20px auto;
+  width: 580px;
   border: black solid 2px;
   border-radius: 10px;
-
 }
 
 @media only screen and (max-width: 580px) {
   select {
-      width: 150px;
+      width: 200px;
   }
   audio{
-    width: 150px;
+    width: 200px;
   }
   img{
-    width: 150px;
+    width: 200px;
   }
 }
