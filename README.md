@@ -1,10 +1,10 @@
 # QuranOnline
 https://quranonline.netlify.app/
 
-# How to Download?  
+# How to download?  
 <p>
 <p align="center">
-  <img src="https://github.com/SaidRH/QuranOnline/blob/master/images/download.gif">  
+  <img src="https://github.com/SaidRH/QuranOnline/blob/master/images/howtodownload.gif">  
 <p>
   
 # Contribute  
