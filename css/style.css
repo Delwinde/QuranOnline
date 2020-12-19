@@ -19,6 +19,9 @@ select{
   height: 50px;
   border-radius: 20px;
   border: black solid 2px;
+  -moz-box-shadow: 1px 1px 1px 1px black;
+  -webkit-box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 audio{
