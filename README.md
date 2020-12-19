@@ -4,7 +4,7 @@ https://quranonline.netlify.app/
 # How to download?  
 <p>
 <p align="center">
-  <img src="https://github.com/SaidRH/QuranOnline/blob/master/images/howtodownload.gif" width="200">  
+  <img src="https://github.com/SaidRH/QuranOnline/blob/master/images/howtodownload.gif" width="500">  
 <p>
   
 # Contribute  
